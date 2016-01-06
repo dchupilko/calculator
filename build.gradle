@@ -1,9 +1,12 @@
-version '1.0-SNAPSHOT'
+plugins {
+  id 'java'
+  id 'idea'
+  id 'application'
+  id 'antlr'
+  id 'com.github.johnrengelman.shadow' version '1.2.2'
+}
 
-apply plugin: 'java'
-apply plugin: 'idea'
-apply plugin: 'application'
-apply plugin: 'antlr'
+version '1.0-SNAPSHOT'
 
 mainClassName = "com.synopsys.homework.Calculator"
 
@@ -18,4 +21,10 @@ dependencies {
     compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.5'
     compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.5'
     antlr "org.antlr:antlr4:4.5"
+}
+
+jar {
+  manifest {
+    attributes("Implementation-Title": "Calculator", "Implementation-Version": version)
+  }
 }
