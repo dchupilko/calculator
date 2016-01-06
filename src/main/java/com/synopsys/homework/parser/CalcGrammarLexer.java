@@ -1,5 +1,9 @@
 // Generated from C:/Git/Calculator/src/main/antlr4/com/synopsys/homework\CalcGrammar.g4 by ANTLR 4.5.1
 package com.synopsys.homework.parser;
+
+    import java.util.Map;
+    import java.util.HashMap;
+
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
@@ -67,6 +71,9 @@ public class CalcGrammarLexer extends Lexer {
 	public Vocabulary getVocabulary() {
 		return VOCABULARY;
 	}
+
+
+	    private Map<String, Integer> vars = new HashMap<>();
 
 
 	public CalcGrammarLexer(CharStream input) {

@@ -1,5 +1,9 @@
 // Generated from C:/Git/Calculator/src/main/antlr4/com/synopsys/homework\CalcGrammar.g4 by ANTLR 4.5.1
 package com.synopsys.homework.parser;
+
+    import java.util.Map;
+    import java.util.HashMap;
+
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -77,6 +81,16 @@ public interface CalcGrammarListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitLet_expr(CalcGrammarParser.Let_exprContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link CalcGrammarParser#set_variable}.
+	 * @param ctx the parse tree
+	 */
+	void enterSet_variable(CalcGrammarParser.Set_variableContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CalcGrammarParser#set_variable}.
+	 * @param ctx the parse tree
+	 */
+	void exitSet_variable(CalcGrammarParser.Set_variableContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link CalcGrammarParser#expr_or_num}.
 	 * @param ctx the parse tree
